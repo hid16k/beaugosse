@@ -1,0 +1,35 @@
+<div id="poster-summary" class="flex justify-center items-center h-screen">
+
+    <div class="w-3/5 h-auto grid grid-cols-3">
+
+        <div id="poster">
+            <img src="https://image.tmdb.org/t/p/original/{{movieDetails.poster_path}}" alt="{{movieDetails.title}}" class="max-h-[650px] rounded-lg w-auto float-left">
+        </div>
+
+        <div id="summary" class="p-3 col-span-2 flex items-center">
+            <div>
+                <h1 class="text-white font-dmsans font-semibold text-3xl">{{movieDetails.original_title}}</h1>
+                <p *ngIf="movieDetails.genres && movieDetails.genres.length > 0" class="text-white font-dmsans mb-6">
+                    <ng-container *ngFor="let g of movieDetails.genres; let isLast = last">
+                      {{ g.name }}{{ isLast ? '' : ', ' }}
+                    </ng-container>
+                </p>
+                <h3 class="text-white font-dmsans font-semibold text-xl">Overview</h3>
+                <p class="text-white font-dmsans mb-6 max-h-[150px] overflow-y-auto">{{movieDetails.overview}}</p>
+                <h3 class="text-white font-dmsans font-semibold text-xl pb-2">Cast</h3>
+                <p class="text-white font-dmsans">
+                    <ng-container *ngFor="let c of castDetails.cast; let i = index">
+                        <ng-container *ngIf="i < 4 && c.known_for_department == 'Acting'">
+                            <div class="inline-block pr-7">
+                                <img src="https://image.tmdb.org/t/p/original{{c.profile_path}}" class="max-h-[100px] rounded-lg block m-auto">
+                                <figcaption>{{ c.name }}</figcaption>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

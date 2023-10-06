@@ -1,0 +1,12 @@
+<div>
+
+    <h1 class="top-0 left-0 text-white font-dmsans p-3 pl-[1px] ml-[185px] text-[32px] fixed">people</h1>
+
+    <div class="mt-20 ml-7 grid grid-cols-8">
+        <div *ngFor="let p of popularPeopleResults">
+            <a [routerLink]="['/peopledetails', p.id ]"><img src="https://image.tmdb.org/t/p/original/{{p.profile_path}}" class="max-h-[300px] rounded-lg w-auto hover:scale-110 duration-150 mt-4"></a>
+            <p class="text-white font-dmsans">{{p.name}}</p>
+        </div>
+    </div>
+
+</div>

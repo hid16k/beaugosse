@@ -1,0 +1,21 @@
+<div id="poster-summary" class="flex justify-center items-center h-screen">
+
+    <div class="w-3/5 h-[576px] grid grid-cols-3">
+
+        <div id="poster">
+            <img src="https://image.tmdb.org/t/p/original/{{peopleDetails.profile_path}}" alt="{{peopleDetails.name}}" class="max-h-[650px] rounded-lg w-auto float-left">
+        </div>
+
+        <div id="summary" class="p-3 col-span-2 flex items-center">
+            <div>
+                <h1 class="text-white font-dmsans font-semibold text-3xl">{{peopleDetails.name}}</h1>
+                <p class="text-white font-dmsans">{{peopleDetails.birthday}}</p>
+                <p class="text-white font-dmsans mb-8">{{peopleDetails.place_of_birth}}</p>
+                <h3 class="text-white font-dmsans font-semibold text-xl">Biography</h3>
+                <p class="text-white font-dmsans mb-8 overflow-x-hidden overflow-y-auto max-h-[300px]">{{peopleDetails.biography}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

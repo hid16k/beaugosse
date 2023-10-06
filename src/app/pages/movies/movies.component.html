@@ -1,0 +1,38 @@
+<div>
+
+    <h1 class="top-0 left-0 text-white font-dmsans p-3 pl-[1px] ml-[185px] text-[32px] fixed">movies</h1>
+    
+    <!--popular movies-->
+    <h2 class="text-white font-dmsans mt-20 p-3 pl-5 text-[24px] items-center flex flex-col">Popular</h2>
+
+    <div class="overflow-x-auto p-5 no-scrollbar">
+        <div class="flex">
+            <a *ngFor="let p of popularMovieResult" [routerLink]="['/moviedetails', p.id]" class="max-h-[300px] w-auto mr-3 flex-shrink-0">
+                <img src="https://image.tmdb.org/t/p/original/{{ p.poster_path }}" alt="{{p.title}}" class="max-h-[300px] rounded-lg w-auto hover:scale-110 duration-150">
+            </a>
+        </div>
+    </div>
+
+    <!--top rated movies-->
+    <h2 class="text-white font-dmsans mt-10 p-3 pl-5 text-[24px] items-center flex flex-col">Top Rated</h2>
+
+    <div class="overflow-x-auto p-5 no-scrollbar">
+        <div class="flex">
+            <a *ngFor="let t of topMovieResult" [routerLink]="['/moviedetails', t.id]" class="max-h-[300px] w-auto mr-3 flex-shrink-0">
+                <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" alt="{{t.title}}" class="max-h-[300px] rounded-lg w-auto hover:scale-110 duration-150">
+            </a>
+        </div>
+    </div>
+
+    <!--upcoming movies-->
+    <h2 class="text-white font-dmsans mt-10 p-3 pl-5 text-[24px] items-center flex flex-col">Upcoming</h2>
+
+    <div class="overflow-x-auto p-5 no-scrollbar">
+        <div class="flex">
+            <a *ngFor="let u of upcomingMovieResult" [routerLink]="['/moviedetails', u.id]" class="max-h-[300px] w-auto mr-3 flex-shrink-0">
+                <img src="https://image.tmdb.org/t/p/original/{{ u.poster_path }}" alt="{{u.title}}" class="max-h-[300px] rounded-lg w-auto hover:scale-110 duration-150">
+            </a>
+        </div>
+    </div>
+
+</div>
