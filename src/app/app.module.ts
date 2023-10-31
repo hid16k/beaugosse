@@ -12,6 +12,8 @@ import { MovieapiService } from './service/movieapi.service';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { TvshowdetailsComponent } from './pages/tvshowdetails/tvshowdetails.component';
 import { PeopledetailsComponent } from './pages/peopledetails/peopledetails.component';
+import { MediaContainerComponent } from './pages/media-container/media-container.component';
+import { MediaItemComponent } from './pages/media-container/media-item/media-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PeopledetailsComponent } from './pages/peopledetails/peopledetails.comp
     PeopleComponent,
     MoviedetailsComponent,
     TvshowdetailsComponent,
-    PeopledetailsComponent
+    PeopledetailsComponent,
+    MediaContainerComponent,
+    MediaItemComponent
   ],
   imports: [
     BrowserModule,

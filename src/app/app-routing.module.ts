@@ -7,6 +7,7 @@ import { PeopleComponent } from './pages/people/people.component';
 import { MoviedetailsComponent } from './pages/moviedetails/moviedetails.component';
 import { TvshowdetailsComponent } from './pages/tvshowdetails/tvshowdetails.component';
 import { PeopledetailsComponent } from './pages/peopledetails/peopledetails.component';
+import { MediaContainerComponent } from './pages/media-container/media-container.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'movies', pathMatch: 'full'},

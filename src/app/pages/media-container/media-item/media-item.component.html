@@ -1,0 +1,8 @@
+<h2 class="text-white font-dmsans mt-20 p-3 pl-5 text-[24px] items-center flex flex-col">{{title}}</h2>
+<div class="overflow-x-auto p-5 no-scrollbar">
+  <div class="flex">
+    <a *ngFor="let item of itemList" [routerLink]="['/details', item.id]" class="max-h-[300px] w-auto mr-3 flex-shrink-0">
+      <img *ngIf="item.poster_path !== null" src="https://image.tmdb.org/t/p/original/{{ item.poster_path }}" alt="{{item.title}}" class="max-h-[300px] rounded-lg w-auto hover:scale-110 duration-150">
+    </a>
+  </div>
+</div>
